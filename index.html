@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevFocus — Aesthetic Study Space</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-rain">
+  <div class="overlay"></div>
+
+  <main class="container">
+    <!-- Top Bar: Aesthetic Wallpapers & Sound Controls -->
+    <div class="top-bar glass">
+      <div class="theme-switcher">
+        <span>Theme:</span>
+        <button class="theme-btn active" data-bg="bg-rain" title="Rainy Night">🌧️</button>
+        <button class="theme-btn" data-bg="bg-cafe" title="Cozy Cafe">☕</button>
+        <button class="theme-btn" data-bg="bg-sunset" title="Sunset Vibes">🌅</button>
+        <button class="theme-btn" data-bg="bg-galaxy" title="Starry Night">🌌</button>
+      </div>
+
+      <div class="sound-controls">
+        <button id="rain-sound-btn" class="sound-btn">🎧 Rain Sound: Off</button>
+        <button id="focus-sound-btn" class="sound-btn">🌊 Brown Noise: Off</button>
+      </div>
+    </div>
+
+    <header>
+      <h1>DevFocus ✨</h1>
+      <p id="quote-text">"Focus on being productive instead of busy."</p>
+    </header>
+
+    <!-- Timer Card -->
+    <section class="timer-card glass">
+      <div class="mode-tabs">
+        <button class="mode-btn active" data-time="25">Focus (25m)</button>
+        <button class="mode-btn" data-time="5">Short Break (5m)</button>
+      </div>
+      <div id="timer-display">25:00</div>
+      <div class="timer-controls">
+        <button id="start-btn" class="primary">Start</button>
+        <button id="pause-btn">Pause</button>
+        <button id="reset-btn">Reset</button>
+      </div>
+    </section>
+
+    <!-- Task Card -->
+    <section class="task-card glass">
+      <h3>Today's Sprint Tasks</h3>
+      <form id="task-form">
+        <input type="text" id="task-input" placeholder="What are you building today?" required />
+        <button type="submit" class="primary">Add</button>
+      </form>
+      <ul id="task-list"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
